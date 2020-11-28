@@ -21,7 +21,7 @@ function dumpAllKelp()
         turtle.select(i)
         if turtle.getItemDetail().name == "minecraft:kelp" then
             turtle.dropDown()
-            accumulator += turtle.getItemCount()
+            accumulator = accumulator + turtle.getItemCount()
         end
     end
 
