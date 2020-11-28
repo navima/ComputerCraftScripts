@@ -51,7 +51,7 @@ while true do
     -- x: any solid block
     -- ^, v, >, <: turtle facing that way
 
-
+    print("Started...")
     turtle.select(delimiterSlot)
 
     -- go until found selected------------
@@ -73,21 +73,26 @@ while true do
     --         c
     -- c _ _ _ ^ c
     --
+    print("Returning home")
+
     turnAround()
     digUntilSelected()
     turnAround()
 
     -- dump cum
     -- wait until dumped all cum (fuel-saving)
+    print("Dumping kelp...")
     while dumpAllKelp() > 0 do
         sleep(2)
     end
 
     -- suck energy
+    print("Sucking fuel")
     turtle.select(fuelSlot)
     turtle.suckUp(64-turtle.getItemCount())
     turtle.refuel()
 
     -- wait
+    print("Sleeping")
     sleep(100)
 end
