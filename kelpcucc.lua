@@ -3,6 +3,8 @@ function digUntilSelected()
     while not(turtle.compare()) do
         turtle.dig()
         turtle.forward()
+        sleep(3)
+        turtle.suckDown()
     end
 end
 
@@ -85,4 +87,7 @@ while true do
     turtle.select(fuelSlot)
     turtle.suckUp(64-turtle.getItemCount())
     turtle.refuel()
+
+    -- wait
+    sleep(100)
 end
